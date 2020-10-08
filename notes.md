@@ -2,18 +2,31 @@
 
 ## Requirements
 
-A client has hired you to build an API for managing `zoos` and the `animals` kept at each `zoo`. The API will be used for `zoos` in the _United States of America_, no need to worry about addresses in other countries.
+Build a system to manage students and cohorts for LS.
 
-For the `zoos` the client wants to record:
+Manage students,
+Manage cohorts,
+Add students to cohorts
 
-- name.
-- address.
+- a cohort can have multiple students.
+- a student can join more than one cohort over time.
 
-For the `animals` the client wants to record:
+## Relationships
 
-- name.
-- species.
-- list of all the zoos where they have resided.
+- one to one (ignore)
+- one to many (most common)
+- many to many (a trick)
 
-Determine the database tables necessary to track this information.
-Label any relationships between table.
+# Principles
+
+- every table must have a primary key.
+- work on two or three entities (each entity is a noun --> table) at a time.
+- one to many --> use a foreign key (a column in a table that references a primary key in another table.)
+- the foreign key goes on the many side.
+- many to many --> use a third table.
+- the third table could have additional information.
+
+Example of a one to many relationship:
+
+- a "track" can have many "cohorts."
+- a "cohort" belongs to only one "track."
